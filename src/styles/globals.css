@@ -3,8 +3,13 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --dark-blue_c: #1836f5;
+  --dark-header_c: #1836f5;
   --secondary: #33c1ff;
+  --dark-blue_c: #191b3b;
+}
+
+.bg-dark-header_c {
+  background-color: var(--dark-header_c);
 }
 
 .bg-dark-blue_c {
