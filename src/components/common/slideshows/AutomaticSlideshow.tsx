@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -11,7 +12,7 @@ interface ImageSlideShowProps {
 
 const AutomaticSlideshow: React.FC<ImageSlideShowProps> = ({ 
   images,
-  intervalTime = 3000
+  intervalTime = 5000
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -46,17 +47,17 @@ const AutomaticSlideshow: React.FC<ImageSlideShowProps> = ({
   return (
     <div className="relative w-full max-w-3xl mx-auto h-96">
       {/* Main slideshow container */}
-      <div className="relative w-full h-full overflow-hidden rounded-lg">
+      <div className="relative w-full h-full overflow-hidden rounded-4xl">
         <AnimatePresence mode="wait">
           <motion.img
             key={currentIndex}
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
-            className="absolute w-full h-full object-cover"
-            initial={{ opacity: 0, x: 100 }}
+            className="absolute w-full h-full object-cover rounded-4xl"
+            initial={{ opacity: 0, x: 120 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, x: -120 }}
+            transition={{ duration: 0.7 }}
           />
         </AnimatePresence>
       </div>

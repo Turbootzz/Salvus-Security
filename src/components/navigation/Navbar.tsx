@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Phone from "@/components/common/icons/Phone";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
@@ -9,6 +10,12 @@ export default function Navbar() {
 
   return (
 	<nav className="bg-white shadow-md fixed w-full z-10">
+	  <div className="bg-dark-header_c p-4 flex justify-center items-center text-center text-white">
+		<div className="mx-2">
+		  <Phone />
+		</div>
+		<p>030 - 123 45 67</p>
+	  </div>
 	  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div className="flex justify-between h-20 items-center">
 		  {/* Logo */}
@@ -41,16 +48,28 @@ export default function Navbar() {
 				transition={{ duration: 0.2 }}
 				className="absolute top-20 left-0 w-full bg-white md:static md:flex md:items-center md:space-x-6 md:w-auto shadow-md md:shadow-none"
 			  >
-				<a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0">
+				<a
+				  href="#"
+				  className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0"
+				>
 				  Home
 				</a>
-				<a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0">
+				<a
+				  href="#"
+				  className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0"
+				>
 				  Diensten
 				</a>
-				<a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0">
+				<a
+				  href="#"
+				  className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0"
+				>
 				  Over ons
 				</a>
-				<a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0">
+				<a
+				  href="#"
+				  className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0"
+				>
 				  Contat
 				</a>
 			  </motion.div>
