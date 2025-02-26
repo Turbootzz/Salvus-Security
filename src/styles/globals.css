@@ -6,6 +6,8 @@
   --dark-header_c: #1a2ca1;
   --secondary: #2956e6;
   --dark-blue_c: #191b3b;
+  --light-blue_c: #d8dfed;
+  --light-gray_c: #cfd6e3;
 }
 
 .bg-dark-header_c {
@@ -22,6 +24,14 @@
 
 .bg-dark-blue_c {
   background-color: var(--dark-blue_c);
+}
+
+.bg-light-blue_c {
+  background-color: var(--light-blue_c);
+}
+
+.bg-gray-blue_c {
+  background-color: var(--light-gray_c);
 }
 
 @layer base {

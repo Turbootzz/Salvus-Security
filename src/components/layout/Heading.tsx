@@ -1,6 +1,5 @@
 "use client";
 import AutomaticSlideshow from "../common/slideshows/AutomaticSlideshow";
-import Image from "next/image";
 import Button from "../common/buttons/Button";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
