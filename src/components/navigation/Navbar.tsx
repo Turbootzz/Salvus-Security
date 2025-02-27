@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from 'next/link'
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Phone from "@/components/common/icons/Phone";
@@ -10,12 +11,14 @@ export default function Navbar() {
 
   return (
 	<nav className="bg-white shadow-md fixed w-full z-10">
-	  <div className="bg-dark-header_c p-4 flex justify-center items-center text-center text-white">
+	  {/* Mobile phone banner */}
+	  <div className="md:hidden bg-dark-header_c p-4 flex justify-center items-center text-center text-white">
 		<div className="mx-2">
 		  <Phone />
 		</div>
 		<p>030 - 123 45 67</p>
 	  </div>
+	  
 	  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div className="flex justify-between h-20 items-center">
 		  {/* Logo */}
@@ -28,6 +31,45 @@ export default function Navbar() {
 			/>
 		  </div>
 
+		  {/* Desktop Navigation */}
+		  <div className="hidden md:flex md:items-center md:space-x-8">
+		  <Link
+			  href="/"
+			  className="text-blue-700 font-medium"
+			>
+			  Home
+			</Link>
+			<Link
+			  href="/Diensten"
+			  className="text-gray-800 hover:text-blue-700 font-medium"
+			>
+			  Diensten
+			</Link>
+			<Link
+			  href="/Over-ons"
+			  className="text-gray-800 hover:text-blue-700 font-medium"
+			>
+			  Over ons
+			</Link>
+			<Link
+			  href="/Contact"
+			  className="text-gray-800 hover:text-blue-700 font-medium"
+			>
+			  Contact
+			</Link>
+		  </div>
+
+		  {/* Desktop CTA buttons */}
+		  <div className="hidden md:flex md:items-center md:space-x-4">
+			<Link href="tel:0301234567" className="flex items-center px-4 py-2 border border-blue-700 text-blue-700 rounded-full hover:bg-blue-50">
+			  <Phone/>
+			  <span className="ml-2">(030) - 1234567</span>
+			</Link>
+			<Link href="/" className="px-6 py-2 bg-blue-700 text-white font-medium rounded-full hover:bg-blue-800">
+			  Beveiliging binnen 24 uur
+			</Link>
+		  </div>
+
 		  {/* Hamburger Menu (Mobile) */}
 		  <div className="md:hidden flex items-center">
 			<button
@@ -37,46 +79,47 @@ export default function Navbar() {
 			  {isOpen ? <X size={28} /> : <Menu size={28} />}
 			</button>
 		  </div>
-
-		  {/* Navigation Links */}
-		  <AnimatePresence>
-			{isOpen && (
-			  <motion.div
-				initial={{ opacity: 0, y: -10 }}
-				animate={{ opacity: 1, y: 0 }}
-				exit={{ opacity: 0, y: -10 }}
-				transition={{ duration: 0.2 }}
-				className="absolute top-20 left-0 w-full bg-white md:static md:flex md:items-center md:space-x-6 md:w-auto shadow-md md:shadow-none"
-			  >
-				<a
-				  href="#"
-				  className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0"
-				>
-				  Home
-				</a>
-				<a
-				  href="#"
-				  className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0"
-				>
-				  Diensten
-				</a>
-				<a
-				  href="#"
-				  className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0"
-				>
-				  Over ons
-				</a>
-				<a
-				  href="#"
-				  className="block px-4 py-2 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:mt-0"
-				>
-				  Contat
-				</a>
-			  </motion.div>
-			)}
-		  </AnimatePresence>
 		</div>
 	  </div>
+	  
+	  {/* Mobile Navigation Menu */}
+	  <AnimatePresence>
+		{isOpen && (
+		  <motion.div
+			initial={{ opacity: 0, y: -10 }}
+			animate={{ opacity: 1, y: 0 }}
+			exit={{ opacity: 0, y: -10 }}
+			transition={{ duration: 0.2 }}
+			className="md:hidden absolute w-full bg-white shadow-md"
+			style={{ top: "calc(80px + 56px)" }} /* 80px (h-20) + approx 56px for phone banner */
+		  >
+			<Link
+			  href="/"
+			  className="block px-4 py-3 text-gray-800 hover:bg-gray-100"
+			>
+			  Home
+			</Link>
+			<Link
+			  href="/Diensten"
+			  className="block px-4 py-3 text-gray-800 hover:bg-gray-100"
+			>
+			  Diensten
+			</Link>
+			<Link
+			  href="/Over-ons"
+			  className="block px-4 py-3 text-gray-800 hover:bg-gray-100"
+			>
+			  Over ons
+			</Link>
+			<Link
+			  href="/Contact"
+			  className="block px-4 py-3 text-gray-800 hover:bg-gray-100"
+			>
+			  Contact
+			</Link>
+		  </motion.div>
+		)}
+	  </AnimatePresence>
 	</nav>
   );
 }

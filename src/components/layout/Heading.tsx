@@ -34,7 +34,9 @@ export default function Heading() {
   return (
 	<section className="bg-dark-blue_c pt-35 pb-20">
 	  <div className="container lg:container-lg">
-		<h1 className="text-background text-3xl font-bold mt-12 mb-4">
+		<div className="md:flex">
+		<div className="md:block md:pr-5 mt-12">
+		<h1 className="text-background text-3xl md:text-5xl font-bold mb-4 mr-5">
 			Het&nbsp;
 			<AnimatePresence mode="wait">
 			  <motion.span
@@ -56,9 +58,10 @@ export default function Heading() {
 		  full-service verhuizingen, sterk personeel op locatie, verhuur van
 		  verhuisliften en speciaal transport.
 		</p>
-		
 		<Button text="Binnen 24 uur een offerte op maat &rarr;" onClick={() => alert("Klik!")} />
+		</div>
 		<AutomaticSlideshow images={images} intervalTime={5000} />
+		</div>
 	  </div>
 	</section>
   );

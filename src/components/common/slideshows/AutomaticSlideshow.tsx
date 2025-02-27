@@ -45,7 +45,7 @@ const AutomaticSlideshow: React.FC<ImageSlideShowProps> = ({
   };
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto h-96">
+    <div className="relative w-full max-w-3xl mx-auto h-96 md:h-124">
       {/* Main slideshow container */}
       <div className="relative w-full h-full overflow-hidden rounded-4xl">
         <AnimatePresence mode="wait">
