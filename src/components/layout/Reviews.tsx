@@ -2,8 +2,7 @@
 import Button from "../common/buttons/Button";
 import React from 'react'; 
 import ValueProposition from "../common/cards/ValueProposition";
-import ReviewCarousel from "../common/cards/ReviewCarousel";
-import ReviewCard from "../common/cards/ReviewCard";
+import ReviewSlideShow from "../common/cards/ReviewSlideShow";
 
 export default function Reviews() {
 	const [currentSlide, setCurrentSlide] = React.useState(4);
@@ -42,7 +41,7 @@ export default function Reviews() {
 	  </div>
 	  <ValueProposition />
 	  <div className="flex justify-center p-8 bg-gray-100">
-	  <ReviewCarousel reviews={reviews} />
+	  <ReviewSlideShow />
 	</div>
 	</section>
   );
