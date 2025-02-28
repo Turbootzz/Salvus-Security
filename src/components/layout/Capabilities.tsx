@@ -14,11 +14,13 @@ export default function Capabilities() {
 
   return (
 	<section className="bg-background mt-13 mb-13">
-	  <div className="container lg:container-lg">
+	  <div className="container md:container-md lg:container-lg">
+		<div className="flex">
+		<div className="md:block mr-10">
 		<p className="text-secondary font-semibold pb-3">
 		  Laat ons het zware werk doen!
 		</p>
-		<h2 className="text-2xl font-bold pb-3">Hoe kunnen we helpen?</h2>
+		<h2 className="text-2xl md:text-4xl font-bold pb-3">Hoe kunnen we helpen?</h2>
 		<p className="text-gray-700 pb-4">
 		  Verhuisservice op maat voor particulieren, van kleine appartementen
 		  tot grotere woningen. Professionele transportservice voor het
@@ -28,6 +30,7 @@ export default function Capabilities() {
 		  text="Bekijk onze diensten &rarr;"
 		  onClick={() => alert("Klik!")}
 		/>
+		</div>
 
 		<div className="bg-light-blue_c flex flex-col gap-0 rounded-lg w-full">
 		  {/* Buttons */}
@@ -83,6 +86,7 @@ export default function Capabilities() {
 			  {!selected && <p></p>}
 			</motion.div>
 		  </div>
+		</div>
 		</div>
 	  </div>
 	</section>
