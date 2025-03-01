@@ -41,7 +41,7 @@ const ValueItem: React.FC<ValueItemProps> = ({
 const ValueProposition: React.FC = () => {
   return (
 	<>
-	  <div className="w-full bg-light-blue_c pt-12 pb-1 mb-8">
+	  <div className="w-full bg-gray-100 pt-12 pb-1 mb-8">
 		<div className="container mx-auto">
 		  <ValueItem
 			title="Verantwoordelijk"
@@ -50,7 +50,7 @@ const ValueProposition: React.FC = () => {
 		  />
 		</div>
 	  </div>
-	  <div className="w-full bg-light-blue_c pt-12 pb-1 mb-8">
+	  <div className="w-full bg-gray-100 pt-12 pb-1 mb-8">
 		<div className="container mx-auto">
 		  <ValueItem
 			title="Betrouwbaar"

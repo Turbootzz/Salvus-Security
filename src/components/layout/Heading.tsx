@@ -33,7 +33,7 @@ export default function Heading() {
 
   return (
 	<section className="bg-dark-blue_c pt-35 pb-20">
-	  <div className="container lg:container-lg">
+	  <div className="px-10">
 		<div className="md:flex">
 		<div className="md:block md:pr-5 mt-12">
 		<h1 className="text-background text-3xl md:text-5xl font-bold mb-4 mr-5">
@@ -53,7 +53,7 @@ export default function Heading() {
 			<br />
 			en <span className="text-secondary">snelle</span> verhuisbedrijf
 		</h1>
-		<p className="text-background mb-7 leading-7">
+		<p className="text-background mb-7 leading-7 text-base md:text-lg">
 		  Op zoek naar een betrouwbaar verhuisbedrijf? Quick Move biedt
 		  full-service verhuizingen, sterk personeel op locatie, verhuur van
 		  verhuisliften en speciaal transport.
