@@ -5,7 +5,7 @@ export default function Services() {
   return (
 	<section className="bg-light-blue_c mt-13 mb-13">
 	  <div className="container lg:container-lg pt-10">
-		<h4 id="diensten" className="text-blue-700 border text-sm border-gray-400 rounded-4xl px-3 py-1 inline-block mb-4 scroll-mt-20">
+		<h4 id="diensten" className="text-blue-700 border text-sm border-gray-400 rounded-4xl px-3 py-1 inline-block mb-4 scroll-mt-40 md:scroll-mt-25">
 		  Onze diensten
 		</h4>
 		<h2 className="text-2xl md:text-4xl font-bold mb-3 md:max-w-80">

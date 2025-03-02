@@ -5,9 +5,11 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Phone from "@/components/common/icons/Phone";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+	const pathname = usePathname();
+	const [isOpen, setIsOpen] = useState(false);
 
   return (
 	<nav className="bg-white shadow-md fixed w-full z-10">
@@ -33,32 +35,24 @@ export default function Navbar() {
 
 		  {/* Desktop Navigation */}
 		  <div className="hidden md:flex md:items-center md:space-x-8">
-			<Link href="/" className="text-blue-700 font-medium">
+			<Link href="/" className={`font-medium ${pathname === "/" ? "text-blue-700" : "text-gray-800 hover:text-blue-700"}`}>
 			  Home
 			</Link>
 			<Link
-			  href="/"
-			  as="/#diensten"
-			  scroll={false}
-			  onClick={(e) => {
-				e.preventDefault();
-				const element = document.getElementById("diensten");
-				if (element) {
-				  element.scrollIntoView({ behavior: "smooth" });
-				}
-			  }}
+			  href="/#diensten"
+			  className={`font-medium ${pathname === "/#diensten" ? "text-blue-700" : "text-gray-800 hover:text-blue-700"}`}
 			>
 			  Diensten
 			</Link>
 			<Link
-			  href="/Over-ons"
-			  className="text-gray-800 hover:text-blue-700 font-medium"
+			  href="/over-ons"
+			  className={`font-medium ${pathname === "/over-ons" ? "text-blue-700" : "text-gray-800 hover:text-blue-700"}`}
 			>
 			  Over ons
 			</Link>
 			<Link
-			  href="/Contact"
-			  className="text-gray-800 hover:text-blue-700 font-medium"
+			  href="/contact"
+			  className={`font-medium ${pathname === "/contact" ? "text-blue-700" : "text-gray-800 hover:text-blue-700"}`}
 			>
 			  Contact
 			</Link>
@@ -74,7 +68,7 @@ export default function Navbar() {
 			  <span className="ml-2">(030) - 1234567</span>
 			</Link>
 			<Link
-			  href="/"
+			  href="/contact"
 			  className="px-6 py-2 bg-blue-700 text-white font-medium rounded-full hover:bg-blue-800"
 			>
 			  Beveiliging binnen 24 uur
@@ -108,25 +102,25 @@ export default function Navbar() {
 		  >
 			<Link
 			  href="/"
-			  className="block px-4 py-3 text-gray-800 hover:bg-gray-100"
+			  className={`block px-4 py-3 ${pathname === "/" ? "text-black font-bold" : "text-gray-800 hover:bg-gray-100"}`}
 			>
 			  Home
 			</Link>
 			<Link
-			  href="/Diensten"
-			  className="block px-4 py-3 text-gray-800 hover:bg-gray-100"
+			  href="/#diensten"
+			  className={`block px-4 py-3 ${pathname === "/#diensten" ? "text-black font-bold" : "text-gray-800 hover:bg-gray-100"}`}
 			>
 			  Diensten
 			</Link>
 			<Link
-			  href="/Over-ons"
-			  className="block px-4 py-3 text-gray-800 hover:bg-gray-100"
+			  href="/over-ons"
+			  className={`block px-4 py-3 ${pathname === "/over-ons" ? "text-black font-bold" : "text-gray-800 hover:bg-gray-100"}`}
 			>
 			  Over ons
 			</Link>
 			<Link
-			  href="/Contact"
-			  className="block px-4 py-3 text-gray-800 hover:bg-gray-100"
+			  href="/contact"
+			  className={`block px-4 py-3 ${pathname === "/contact" ? "text-black font-bold" : "text-gray-800 hover:bg-gray-100"}`}
 			>
 			  Contact
 			</Link>
