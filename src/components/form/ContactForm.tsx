@@ -152,7 +152,7 @@ const ContactForm = () => {
 			  onChange={handleChange}
 			  className={`pl-10 w-full px-4 py-2 border ${
 				errors.name ? "border-red-500" : "border-gray-300"
-			  } rounded-lg focus:ring-blue-500 focus:border-blue-500`}
+			  } rounded-lg focus:ring-gray-500 focus:border-gray-500`}
 			  placeholder="Your name"
 			/>
 		  </div>
@@ -180,7 +180,7 @@ const ContactForm = () => {
 			  onChange={handleChange}
 			  className={`pl-10 w-full px-4 py-2 border ${
 				errors.email ? "border-red-500" : "border-gray-300"
-			  } rounded-lg focus:ring-blue-500 focus:border-blue-500`}
+			  } rounded-lg focus:ring-neutral-500 focus:border-neutral-500`}
 			  placeholder="jouw.email@voorbeeld.nl"
 			/>
 		  </div>
@@ -204,7 +204,7 @@ const ContactForm = () => {
 			onChange={handleChange}
 			className={`w-full px-4 py-2 border ${
 			  errors.subject ? "border-red-500" : "border-gray-300"
-			} rounded-lg focus:ring-blue-500 focus:border-blue-500`}
+			} rounded-lg focus:ring-neutral-500 focus:border-neutral-500`}
 			placeholder="Korte beschrijving van het bericht"
 		  />
 		  {errors.subject && (
@@ -224,7 +224,7 @@ const ContactForm = () => {
 			name="priority"
 			value={formData.priority}
 			onChange={handleChange}
-			className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+			className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-500 focus:border-gray-500"
 		  >
 			<option value="low">Laag</option>
 			<option value="medium">Medium</option>
@@ -251,7 +251,7 @@ const ContactForm = () => {
 			  rows={4}
 			  className={`pl-10 w-full px-4 py-2 border ${
 				errors.message ? "border-red-500" : "border-gray-300"
-			  } rounded-lg focus:ring-blue-500 focus:border-blue-500`}
+			  } rounded-lg focus:ring-gray-500 focus:border-gray-500`}
 			  placeholder="Beschrijf uw bericht"
 			/>
 		  </div>

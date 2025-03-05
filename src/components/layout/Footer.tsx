@@ -38,7 +38,7 @@ export default function Footer() {
 				<Mail size={18} /> info@salvussecurity.nl
 			  </li>
 			  <li className="flex items-center gap-2 text-gray-200">
-				<MapPin size={18} /> Amsterdam, Nederland
+				<MapPin size={18} /> Utrecht, Nederland
 			  </li>
 			</ul>
 		  </div>
