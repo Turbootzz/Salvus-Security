@@ -54,17 +54,17 @@ export default function OverOns() {
 			Ons Team
 		  </h2>
 		  <div className="mt-6 grid md:grid-cols-3 gap-6">
-			<div className="bg-light-blue_c p-6 rounded-xl text-center shadow-lg">
+			<div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg">
 			  <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
 			  <h3 className="text-lg font-medium">John Doe</h3>
 			  <p className="text-gray-700">CEO & Security Expert</p>
 			</div>
-			<div className="bg-light-blue_c p-6 rounded-xl text-center shadow-lg">
+			<div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg">
 			  <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
 			  <h3 className="text-lg font-medium">Jane Smith</h3>
 			  <p className="text-gray-700">CTO & Cybersecurity Specialist</p>
 			</div>
-			<div className="bg-light-blue_c p-6 rounded-xl text-center shadow-lg">
+			<div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg">
 			  <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
 			  <h3 className="text-lg font-medium">Michael Lee</h3>
 			  <p className="text-gray-700">Lead Penetration Tester</p>

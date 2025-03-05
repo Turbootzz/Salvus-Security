@@ -4,34 +4,38 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --dark-header_c: #1a2ca1;
-  --secondary: #2956e6;
-  --dark-blue_c: #191b3b;
-  --light-blue_c: #d8dfed;
-  --light-gray_c: #cfd6e3;
+  --light-gray_c: #7f7d7e;
+  --dark-gray_c: #474646;
+  --gray_c: #919097;
+
 }
 
 .bg-dark-header_c {
   background-color: var(--dark-header_c);
 }
 
-.bg-secondary {
-  background-color: var(--secondary);
+.bg-gray_c {
+  background-color: var(--gray_c);
 }
 
-.text-secondary {
-  color: var(--secondary);
+.text-gray_c {
+  color: var(--gray_c);
 }
 
-.bg-dark-blue_c {
-  background-color: var(--dark-blue_c);
-}
-
-.bg-light-blue_c {
-  background-color: var(--light-blue_c);
-}
-
-.bg-gray-blue_c {
+.bg-light-gray_c {
   background-color: var(--light-gray_c);
+}
+
+.text-light-gray_c {
+  color: var(--light-gray_c);
+}
+
+.bg-dark-gray_c {
+  background-color: var(--dark-gray_c);
+}
+
+.text-dark-gray_c {
+  color: var(--dark-gray_c);
 }
 
 @layer base {

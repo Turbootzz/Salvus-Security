@@ -17,7 +17,7 @@ export default function Capabilities() {
 	  <div className="container md:container-md lg:container-lg">
 		<div className="md:flex">
 		<div className="md:block mr-10">
-		<p className="text-secondary font-semibold pb-3">
+		<p className="text-gray_c font-semibold pb-3">
 		  Laat ons het zware werk doen!
 		</p>
 		<h2 className="text-2xl md:text-4xl font-bold pb-3">Hoe kunnen we helpen?</h2>
@@ -32,14 +32,14 @@ export default function Capabilities() {
 		/>
 		</div>
 
-		<div className="bg-light-blue_c flex flex-col gap-0 rounded-lg w-full">
+		<div className="bg-gray-100 flex flex-col gap-0 rounded-lg w-full">
 		  {/* Buttons */}
 		  <div className="flex px-0 mx-0 flex-col w-full">
 			{buttonNames.map((button, index) => (
 			  <button
 				key={button.label}
 				className={`py-4 transition-all duration-200 text-left pl-6 flex font-semibold text-sm ${
-				  selected === button.label ? "text-black" : "bg-gray-blue_c "
+				  selected === button.label ? "text-black bg-gray-200" : "bg-gray-100 "
 				} ${index === 0 ? "rounded-t-lg" : "rounded-none"}
 				${index === 2 ? "rounded-b-xl" : "rounded-none"}`}
 				onClick={() => setSelected(button.label)}

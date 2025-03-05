@@ -126,7 +126,7 @@ const ContactForm = () => {
   return (
 	<div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg border border-gray-100">
 	  <div className="flex items-center justify-center mb-6">
-		<Shield className="h-8 w-8 text-secondary mr-2" />
+		<Shield className="h-8 w-8 text-gray_c mr-2" />
 		<h2 className="text-2xl font-bold text-gray-900">
 			Contact opnemen
 		</h2>
@@ -266,8 +266,8 @@ const ContactForm = () => {
 			disabled={isSubmitting}
 			className={`w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
 			  isSubmitting
-				? "bg-blue-400 cursor-not-allowed"
-				: "bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+				? "bg-light-gray_c cursor-not-allowed"
+				: "bg-black hover:bg-gray_c focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
 			}`}
 		  >
 			{isSubmitting ? (

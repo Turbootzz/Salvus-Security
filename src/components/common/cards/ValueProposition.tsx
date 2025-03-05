@@ -55,7 +55,7 @@ const ValueProposition: React.FC = () => {
 		  <ValueItem
 			title="Betrouwbaar"
 			description="Altijd betrouwbaar door hoogwaardige en eerlijke diensten."
-			iconColor="bg-secondary"
+			iconColor="bg-gray_c"
 		  />
 		</div>
 	  </div>
