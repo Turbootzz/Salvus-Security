@@ -32,7 +32,7 @@ export default function Heading() {
   ];
 
   return (
-	<section className="bg-dark-gray_c pt-35 pb-20">
+	<section className="bg-dark-gray_c pt-20 pb-20">
 	  <div className="container mx-auto">
 		<div className="md:flex">
 		<div className="md:block md:pr-5 mt-12">
@@ -54,11 +54,9 @@ export default function Heading() {
 			beveiligingsbedrijf
 		</h1>
 		<p className="text-background mb-7 leading-7 text-base md:text-lg">
-		  Op zoek naar een betrouwbaar verhuisbedrijf? Quick Move biedt
-		  full-service verhuizingen, sterk personeel op locatie, verhuur van
-		  verhuisliften en speciaal transport.
+		Uw Veilige Keuze: Professionele Beveiligers voor Ongeëvenaarde Bescherming
 		</p>
-		<Button text="Beveiliging binnen 24 uur &rarr;" onClick={() => alert("Klik!")} />
+		<Button text="Offerte aanvragen &rarr;" onClick={() => alert("Klik!")} />
 		<div className="hidden md:flex md:items-center md:space-x-4">
 	  <div className="flex items-center">
 		<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">

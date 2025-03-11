@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import Phone from "@/components/common/icons/Phone";
+//import Phone from "@/components/common/icons/Phone";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
@@ -13,12 +13,12 @@ export default function Navbar() {
   return (
 	<nav className="bg-background shadow-md fixed w-full z-10">
 	  {/* Mobile phone banner */}
-	  <div className="md:hidden bg-dark-header_c p-4 flex justify-center items-center text-center text-white">
+	  {/* <div className="md:hidden bg-dark-header_c p-4 flex justify-center items-center text-center text-white">
 		<div className="mx-2">
 		  <Phone />
 		</div>
 		<p>030 - 123 45 67</p>
-	  </div>
+	  </div> */}
 
 	  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div className="flex justify-between h-20 items-center">
@@ -65,13 +65,13 @@ export default function Navbar() {
 
 		  {/* Desktop CTA buttons */}
 		  <div className="hidden md:flex md:items-center md:space-x-4">
-			<Link
+			{/* <Link
 			  href="tel:0301234567"
 			  className="flex items-center px-4 py-2 border border-black text-black rounded-full hover:bg-blue-50"
 			>
 			  <Phone />
 			  <span className="ml-2">(030) - 1234567</span>
-			</Link>
+			</Link> */}
 			<Link
 			  href="/contact"
 			  className="px-6 py-2 bg-black text-white font-medium rounded-full hover:bg-blue-800"
@@ -101,9 +101,9 @@ export default function Navbar() {
 			exit={{ opacity: 0, y: -10 }}
 			transition={{ duration: 0.2 }}
 			className="md:hidden absolute w-full bg-white shadow-md"
-			style={{
-			  top: "calc(80px + 56px)",
-			}} /* 80px (h-20) + approx 56px for phone banner */
+			// style={{
+			//   top: "calc(80px + 56px)",
+			// }} /* 80px (h-20) + approx 56px for phone banner */
 		  >
 			<Link
 			  href="/"

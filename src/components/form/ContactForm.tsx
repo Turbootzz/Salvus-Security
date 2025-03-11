@@ -105,14 +105,13 @@ const ContactForm = () => {
 			<Check className="h-6 w-6 text-green-600" />
 		  </div>
 		  <h2 className="text-2xl font-bold text-gray-900 mb-3">
-			Message Received
+			Bericht Ontvangen
 		  </h2>
 		  <p className="text-gray-600 mb-10">
-			Thank you for contacting our security team. We&apos;ll respond to your
-			inquiry as soon as possible.
+			Bedankt voor uw bericht. Wij nemen zo snel mogelijk contact met u op.
 		  </p>
 		  <Button
-			text="Send Another Message"
+			text="Stuur nog een bericht"
 			onClick={() => setIsSubmitted(false)}
 			
 		  >
@@ -153,7 +152,7 @@ const ContactForm = () => {
 			  className={`pl-10 w-full px-4 py-2 border ${
 				errors.name ? "border-red-500" : "border-gray-300"
 			  } rounded-lg focus:ring-gray-500 focus:border-gray-500`}
-			  placeholder="Your name"
+			  placeholder="Uw naam"
 			/>
 		  </div>
 		  {errors.name && (
