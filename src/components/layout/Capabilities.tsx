@@ -17,20 +17,18 @@ export default function Capabilities() {
 	<section className="bg-background mt-13 mb-13">
 	  <div className="container md:container-md lg:container-lg">
 		<div className="md:flex">
-		  <div className="md:block mr-10">
+		  <div className="md:block md:mr-44">
 			<p className="text-gray_c font-semibold pb-3">
 			  Laat ons het zware werk doen!
 			</p>
 			<h2 className="text-2xl md:text-4xl font-bold pb-3">
 			  Hoe kunnen we helpen?
 			</h2>
-			<p className="text-gray-700 pb-4 text-base md:text-lg">
+			<p className="text-gray-700 pb-6 text-base md:text-lg">
 			  Wij bieden op maat gemaakte beveiliging voor zowel bedrijven als
 			  particulieren. Of het nu gaat om persoonsbeveiliging,
 			  bedrijfsbeveiliging of evenementenbeveiliging, onze ervaren
-			  beveiligers zorgen voor uw veiligheid. Met 24/7 bewaking en
-			  professionele diensten passen wij onze oplossingen aan uw
-			  specifieke behoeften aan, zodat u met een gerust hart verder kunt.
+			  beveiligers zorgen voor uw veiligheid.
 			</p>
 			<Button
 			  text="Bekijk onze diensten &rarr;"
