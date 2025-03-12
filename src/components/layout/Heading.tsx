@@ -32,77 +32,87 @@ export default function Heading() {
   ];
 
   return (
-	<section className="bg-dark-gray_c pt-20 pb-20">
+	<section className="bg-dark-gray_c pt-20 md:pt-40 pb-20">
 	  <div className="container mx-auto">
 		<div className="md:flex">
-		<div className="md:block md:pr-5 mt-12">
-		<h1 className="text-background text-3xl md:text-5xl font-bold mb-4 mr-5">
-			Het&nbsp;
-			<AnimatePresence mode="wait">
-			  <motion.span
-				key={topicWords[index]}
-				initial={{ opacity: 0, y: -10 }}
-				animate={{ opacity: 2, y: 0 }}
-				exit={{ opacity: 0, y: 10 }}
-				transition={{ duration: 0.5 }}
-				className="inline-block"
-			  >
-				{topicWords[index]}
-			  </motion.span>
-			</AnimatePresence>{" "}
-			<br />
-			beveiligingsbedrijf
-		</h1>
-		<p className="text-background mb-7 leading-7 text-base md:text-lg">
-		Uw Veilige Keuze: Professionele Beveiligers voor Ongeëvenaarde Bescherming
-		</p>
-		<Button text="Offerte aanvragen &rarr;" onClick={() => alert("Klik!")} />
-		<div className="hidden md:flex md:items-center md:space-x-4">
-	  <div className="flex items-center">
-		<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
-		  <svg
-			className="w-4 h-4 text-white"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
-			xmlns="http://www.w3.org/2000/svg"
-		  >
-			<path
-			  strokeLinecap="round"
-			  strokeLinejoin="round"
-			  strokeWidth="2.5"
-			  d="M5 13l4 4L19 7"
-			></path>
-		  </svg>
-		</div>
-		<span className="ml-2 text-white text-sm font-medium">Snel geholpen</span>
-	  </div>
+		  <div className="md:block md:mr-36 mt-12">
+			<h1 className="text-background text-3xl md:text-5xl font-bold mb-4 mr-5">
+			  Het&nbsp;
+			  <AnimatePresence mode="wait">
+				<motion.span
+				  key={topicWords[index]}
+				  initial={{ opacity: 0, y: -10 }}
+				  animate={{ opacity: 2, y: 0 }}
+				  exit={{ opacity: 0, y: 10 }}
+				  transition={{ duration: 0.5 }}
+				  className="inline-block"
+				>
+				  {topicWords[index]}
+				</motion.span>
+			  </AnimatePresence>{" "}
+			  <br />
+			  beveiligingsbedrijf
+			</h1>
+			<p className="text-background mb-7 leading-7 text-base md:text-lg">
+			  Zoekt u ervaren beveiligers voor uw bedrijf, winkel, evenement of
+			  horecagelegenheid? Onze professionals staan voor u klaar! Wij
+			  bieden maatwerk beveiligingsoplossingen en zorgen ervoor dat
+			  risico&apos;s worden geminimaliseerd.
+			</p>
+			<Button
+			  text="Offerte aanvragen &rarr;"
+			  onClick={() => alert("Klik!")}
+			/>
+			<div className="hidden md:flex md:items-center md:space-x-4">
+			  <div className="flex items-center">
+				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
+				  <svg
+					className="w-4 h-4 text-white"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				  >
+					<path
+					  strokeLinecap="round"
+					  strokeLinejoin="round"
+					  strokeWidth="2.5"
+					  d="M5 13l4 4L19 7"
+					></path>
+				  </svg>
+				</div>
+				<span className="ml-2 text-white text-sm font-medium">
+				  Snel geholpen
+				</span>
+			  </div>
 
-	  {/* Second checkbox with text */}
-	  <div className="flex items-center">
-		<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
-		  <svg
-			className="w-4 h-4 text-white"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
-			xmlns="http://www.w3.org/2000/svg"
-		  >
-			<path
-			  strokeLinecap="round"
-			  strokeLinejoin="round"
-			  strokeWidth="2.5"
-			  d="M5 13l4 4L19 7"
-			></path>
-		  </svg>
+			  {/* Second checkbox with text */}
+			  <div className="flex items-center">
+				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
+				  <svg
+					className="w-4 h-4 text-white"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				  >
+					<path
+					  strokeLinecap="round"
+					  strokeLinejoin="round"
+					  strokeWidth="2.5"
+					  d="M5 13l4 4L19 7"
+					></path>
+				  </svg>
+				</div>
+				<span className="ml-2 text-white text-sm font-medium">
+				  Ervaren personeel
+				</span>
+			  </div>
+			</div>
+		  </div>
+		  <AutomaticSlideshow images={images} intervalTime={5000} />
 		</div>
-		<span className="ml-2 text-white text-sm font-medium">Ervaren personeel</span>
 	  </div>
-	</div>
-		</div>
-		<AutomaticSlideshow images={images} intervalTime={5000} />
-		</div>
-	</div>
 	</section>
   );
 }

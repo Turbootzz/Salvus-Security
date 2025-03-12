@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Selvus Security",
-  description: "Salvus Security",
+  description: "Wij bieden maatwerk beveiligingsoplossingen en zorgen ervoor dat risico's worden geminimaliseerd.",
 };
 
 export default function RootLayout({
