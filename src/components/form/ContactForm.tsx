@@ -8,7 +8,6 @@ interface FormState {
   email: string;
   subject: string;
   message: string;
-  priority: "low" | "medium" | "high";
 }
 
 const ContactForm = () => {
@@ -17,7 +16,6 @@ const ContactForm = () => {
 	email: "",
 	subject: "",
 	message: "",
-	priority: "medium",
   });
 
   const [errors, setErrors] = useState<Partial<FormState>>({});
@@ -59,7 +57,6 @@ const ContactForm = () => {
 			email: formData.email,
 			subject: formData.subject,
 			message: formData.message,
-			priority: formData.priority,
 		  }),
 		}
 	  );
@@ -71,7 +68,6 @@ const ContactForm = () => {
 		  email: "",
 		  subject: "",
 		  message: "",
-		  priority: "medium",
 		});
 	  } else {
 		throw new Error("Form submission failed");
@@ -209,26 +205,6 @@ const ContactForm = () => {
 		  {errors.subject && (
 			<p className="mt-1 text-sm text-red-600">{errors.subject}</p>
 		  )}
-		</div>
-
-		<div>
-		  <label
-			htmlFor="priority"
-			className="block text-sm font-medium text-gray-700 mb-1"
-		  >
-			Prioriteit van het bericht
-		  </label>
-		  <select
-			id="priority"
-			name="priority"
-			value={formData.priority}
-			onChange={handleChange}
-			className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-500 focus:border-gray-500"
-		  >
-			<option value="low">Laag</option>
-			<option value="medium">Medium</option>
-			<option value="high">Hoog</option>
-		  </select>
 		</div>
 
 		<div>

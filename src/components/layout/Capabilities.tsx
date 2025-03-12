@@ -67,34 +67,34 @@ export default function Capabilities() {
 			  >
 				{selected === "Objectbeveiliging" && (
 				  <div className="pl-8 text-base">
-					<p className="mb-4">🏠 Particuliere verhuizing</p>
-					<p className="mb-4">🏢 Zakelijke verhuizing</p>
-					<p className="mb-4">🇪🇺 Internationale verhuizing</p>
-					<p className="mb-4">🎹 Speciale verhuizing</p>
+					<p className="mb-4">🥷 Diefstal- en inbraakpreventie</p>
+					<p className="mb-4">⏱️ Snelle respons bij incidenten</p>
+					<p className="mb-4">🦺 Verhoogd het veiligheidsgevoel</p>
+					<p className="mb-4">🔒 Bescherming van bedrijfsmiddelen</p>
 				  </div>
 				)}
 				{selected === "Evenementenbeveiliging" && (
 				  <div className="pl-8 text-base">
-					<p className="mb-4">🎪 Op- & afbouw evenementen</p>
-					<p className="mb-4">🏬 Warehouse personeel</p>
-					<p className="mb-4">🦺 Ondersteuning in de bouw</p>
-					<p className="mb-4">📦 Uitruimingen</p>
+					<p className="mb-4">🧑‍🤝‍🧑 Crowd control en ordehandhaving</p>
+					<p className="mb-4">🥷 Preventie van criminaliteit</p>
+					<p className="mb-4">⏱️ Snelle reactie bij noodsituaties</p>
+					<p className="mb-4">😄 Verbeterde bezoekerservaring</p>
 				  </div>
 				)}
 				{selected === "Horecaportiers" && (
 				  <div className="pl-8 text-base">
-					<p className="mb-4">💨 Spoedtransport</p>
-					<p className="mb-4">🖼️ Kunst transport</p>
-					<p className="mb-4">🎸 Speciaal transport</p>
-					<p className="mb-4">🌎 Internationaal transport </p>
+					<p className="mb-4">✅ Toegangscontrole</p>
+					<p className="mb-4">🥊 Conflictbeheersing</p>
+					<p className="mb-4">🦺 Veiligheidsgevoel voor gasten en personeel</p>
+					<p className="mb-4">💊 Drugs- en wapenscreening</p>
 				  </div>
 				)}
 				{selected === "Winkelbeveiliging" && (
 				  <div className="pl-8 text-base">
-					<p className="mb-4">💨 Spoedtransport</p>
-					<p className="mb-4">🖼️ Kunst transport</p>
-					<p className="mb-4">🎸 Speciaal transport</p>
-					<p className="mb-4">🌎 Internationaal transport </p>
+					<p className="mb-4">🥷 Diefstalpreventie</p>
+					<p className="mb-4">⏱️ Snelle interventie bij incidenten</p>
+					<p className="mb-4">🦺 Verhoogd het veiligheidsgevoel</p>
+					<p className="mb-4">🔒 Schadebeperking en ordehandhaving</p>
 				  </div>
 				)}
 				{!selected && <p></p>}

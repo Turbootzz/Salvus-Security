@@ -3,6 +3,7 @@ import AutomaticSlideshow from "../common/slideshows/AutomaticSlideshow";
 import Button from "../common/buttons/Button";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function Heading() {
   const topicWords = ["ervaren", "betrouwbare", "professionele", "behulpzame"];
@@ -59,10 +60,11 @@ export default function Heading() {
 			  bieden maatwerk beveiligingsoplossingen en zorgen ervoor dat
 			  risico&apos;s worden geminimaliseerd.
 			</p>
-			<Button
-			  text="Offerte aanvragen &rarr;"
-			  onClick={() => alert("Klik!")}
-			/>
+			<Link href="/contact">
+			  <Button
+				text="Offerte aanvragen &rarr;"
+			  />
+			</Link>
 			<div className="hidden md:flex md:items-center md:space-x-4">
 			  <div className="flex items-center">
 				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">

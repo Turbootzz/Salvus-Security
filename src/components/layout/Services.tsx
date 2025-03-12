@@ -11,7 +11,7 @@ export default function Services() {
 		>
 		  Onze diensten
 		</h4>
-		<h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-3 md:max-w-80">
+		<h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-3 md:max-w-100">
 		  Wat
 		  <span className="text-gray-600"> bieden</span> wij aan?
 		</h2>

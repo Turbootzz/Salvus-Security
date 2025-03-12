@@ -12,7 +12,7 @@ export default function Button({ text, onClick, className, disabled, type = "but
 		type={type}
 		onClick={onClick}
 		disabled={disabled}
-		className={`bg-neutral-800 text-white px-4 py-3 rounded-4xl hover:bg-dark-header_c transition-colors mb-10 ${className}`}>
+		className={`bg-neutral-800 text-white px-4 py-3 rounded-4xl hover:bg-black transition-colors mb-10 ${className}`}>
 			{text}
 		</button>
 	);

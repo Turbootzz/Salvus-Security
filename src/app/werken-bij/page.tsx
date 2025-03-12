@@ -14,7 +14,7 @@ export default function WerkenBij() {
 					Werken bij Salvus Security Agency
 				</h4>
 				<h2 className="text-2xl text-background md:text-4xl font-bold mb-3 md:max-w-80">
-					Word onderdeel van ons <span className="text-gray-900">beveiligingsteam</span>
+					Word onderdeel van ons <span className="text-neutral-800">beveiligingsteam</span>
 				</h2>
 				<p className="text-background text-base md:text-lg max-w-120">
 					Wij zijn altijd op zoek naar enthousiaste en betrouwbare beveiligers. 

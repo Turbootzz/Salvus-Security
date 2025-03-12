@@ -74,9 +74,9 @@ export default function Navbar() {
 			</Link> */}
 			<Link
 			  href="/contact"
-			  className="px-6 py-2 bg-black text-white font-medium rounded-full hover:bg-blue-800"
+			  className="px-6 py-2 bg-neutral-800 text-white font-medium rounded-full hover:bg-black"
 			>
-			  Beveiliging binnen 24 uur
+			  Offerte aanvragen
 			</Link>
 		  </div>
 
