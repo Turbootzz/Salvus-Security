@@ -15,7 +15,7 @@ export default function Services() {
 		  Wat
 		  <span className="text-gray-600"> bieden</span> wij aan?
 		</h2>
-		<p className="text-gray-900 text-base md:text-lg max-w-120">
+		<p className="text-gray-900 text-base md:text-lg max-w-180">
 		Wij bieden diverse beveiligingsdiensten aan zoals object-, evenementen-, winkelbeveiliging en mobiele surveillance. 
 		Onze ervaren beveiligers zorgen voor een veilige omgeving en minimaliseren risico&apos;s met 
 		maatwerkoplossingen en moderne technieken.
