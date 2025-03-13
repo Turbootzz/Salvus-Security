@@ -8,19 +8,20 @@ export default function Winkelbeveiliging() {
     <>
       <Header />
       <main className="flex-grow pt-40 md:pt-35 pb-8 md:pb-15">
-        <div className="container mx-auto px-4 md:container text-center md:px-64">
-          <h1 className="text-4xl font-bold pb-4">Winkelbeveiliging</h1>
+        <div className="container mx-auto px-4 md:container md:px-64">
+          <h1 className="text-4xl font-bold pb-4">
+            Winkelbeveiligers van Salvus Security Agency
+          </h1>
           <p className="text-lg pb-6">
-            Winkeldiefstal is een groot probleem voor veel winkels en
-            retailbedrijven. Salvus Security Agency biedt gerichte
-            beveiligingsdiensten om winkeldiefstal te voorkomen en te
-            bestrijden. Onze beveiligers gebruiken een combinatie van gerichte
-            surveillance, discreet toezicht en geavanceerde technologie om
-            verdachte activiteiten op te sporen en diefstal in een vroeg stadium
-            te voorkomen. Onze doelgerichte aanpak zorgt ervoor dat uw winkel,
-            producten en personeel altijd goed beschermd zijn. Kies voor Salvus
-            Security Agency en minimaliseer de risico&apos;s van winkeldiefstal
-            met professionele beveiliging.
+            Winkelbeveiliging is cruciaal voor het beschermen van uw winkel
+            tegen diefstal, fraude en andere veiligheidsrisico&apos;s. Salvus
+            Security Agency levert winkelbeveiligers die zorgen voor een veilige
+            winkelomgeving, zowel voor klanten als personeel. Onze beveiligers
+            zijn getraind in het herkennen van verdachte gedragingen, het
+            voorkomen van winkeldiefstal en het handhaven van de orde in de
+            winkel. Ze dragen bij aan het creëren van een vertrouwde en veilige
+            winkelervaring, waardoor u zich kunt focussen op de groei van uw
+            bedrijf.
           </p>
           <Link href="/contact">
             <Button text="Offerte aanvragen &rarr;" />

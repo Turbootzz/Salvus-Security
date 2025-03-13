@@ -8,21 +8,20 @@ export default function HorecaPortiers() {
     <>
       <Header />
       <main className="flex-grow pt-40 md:pt-35 pb-8 md:pb-15">
-        <div className="container mx-auto px-4 md:container text-center md:px-64">
-          <h1 className="text-4xl font-bold pb-4">Horeca Portiers</h1>
+        <div className="container mx-auto px-4 md:container md:px-64">
+          <h1 className="text-4xl font-bold pb-4">
+            Portiers van Salvus Security Agency
+          </h1>
           <p className="text-lg pb-6">
-            Horecaportiers van Salvus Security Agency zorgen voor een veilige en
-            gastvrije sfeer in uw horecagelegenheid. Of het nu gaat om een
-            restaurant, club, bar of andere feestgelegenheden, onze portiers
-            zijn erop getraind om zowel de veiligheid te waarborgen als een
-            klantvriendelijke omgeving te behouden. Ze controleren de toegang,
-            voorkomen ongewenste situaties en zorgen ervoor dat alles volgens de
-            huisregels verloopt. Onze horecaportiers beschikken over uitstekende
-            communicatieve vaardigheden en weten hoe ze in verschillende
-            situaties de juiste balans moeten vinden tussen gastvrijheid en
-            veiligheid. Kies voor Salvus Security Agency, professionele
-            horecaportiers die uw zaak beschermen en gastvrijheid centraal
-            staat.
+            Onze portiers zorgen voor de veiligheid en het welzijn van uw gasten
+            en medewerkers bij de ingang van uw bedrijfspand of
+            evenementenlocatie. Salvus Security Agency biedt getrainde portiers
+            die niet alleen verantwoordelijk zijn voor het controleren van
+            toegang en het naleven van toegangsregels, maar ook voor het
+            waarborgen van een professionele en gastvrije sfeer. Ze zijn alert,
+            vriendelijk en altijd bereid om te reageren op de behoeften van
+            bezoekers en klanten, zodat u zich kunt concentreren op het runnen
+            van uw bedrijf of evenement.
           </p>
           <Link href="/contact">
             <Button text="Offerte aanvragen &rarr;" />

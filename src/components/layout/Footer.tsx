@@ -2,6 +2,7 @@
 
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SiFacebook, SiInstagram, SiLinkedin } from "react-icons/si";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -20,10 +21,10 @@ export default function Footer() {
 		  <div>
 			<h3 className="text-lg text-gray-100 font-semibold">Navigatie</h3>
 			<ul className="mt-2 space-y-2">
-			  <li><a href="/" className="text-gray-200 hover:text-white">Home</a></li>
-			  <li><a href="/#diensten" className="text-gray-200 hover:text-white">Diensten</a></li>
-			  <li><a href="/over-ons" className="text-gray-200 hover:text-white">Over ons</a></li>
-			  <li><a href="/contact" className="text-gray-200 hover:text-white">Contact</a></li>
+			  <li><Link href="/" className="text-gray-200 hover:text-white">Home</Link></li>
+			  <li><Link href="/#diensten" className="text-gray-200 hover:text-white">Diensten</Link></li>
+			  <li><Link href="/over-ons" className="text-gray-200 hover:text-white">Over ons</Link></li>
+			  <li><Link href="/contact" className="text-gray-200 hover:text-white">Contact</Link></li>
 			</ul>
 		  </div>
 
@@ -48,9 +49,9 @@ export default function Footer() {
 		<div className="mt-8 flex flex-col md:flex-row items-center justify-between">
 		  <p className="text-gray-300 text-sm">© {new Date().getFullYear()} Savlus Security. Alle rechten voorbehouden.</p>
 		  <div className="flex gap-4 mt-4 md:mt-0">
-			<a href="#" className="text-gray-100 hover:text-white"><SiFacebook size={20} /></a>
-			<a href="#" className="text-gray-100 hover:text-white"><SiInstagram size={20} /></a>
-			<a href="#" className="text-gray-100 hover:text-white"><SiLinkedin size={20} /></a>
+			<Link href="/" className="text-gray-100 hover:text-white"><SiFacebook size={20} /></Link>
+			<Link href="/" className="text-gray-100 hover:text-white"><SiInstagram size={20} /></Link>
+			<Link href="/" className="text-gray-100 hover:text-white"><SiLinkedin size={20} /></Link>
 		  </div>
 		</div>
 	  </div>
