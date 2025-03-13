@@ -16,8 +16,8 @@ export default function Capabilities() {
   return (
 	<section className="bg-background mt-13 mb-13">
 	  <div className="container md:container-md lg:container-lg">
-		<div className="md:flex">
-		  <div className="md:block md:mr-44">
+		<div className="xl:flex">
+		  <div className="xl:block xl:mr-44">
 			<p className="text-gray_c font-semibold pb-3">
 			  Laat ons het zware werk doen!
 			</p>
@@ -36,7 +36,7 @@ export default function Capabilities() {
 			/>
 		  </div>
 
-		  <div className="bg-gray-100 flex flex-col gap-0 rounded-lg w-full">
+		  <div className="bg-gray-100 flex flex-col gap-0 rounded-lg w-full md:max-w-100">
 			{/* Buttons */}
 			<div className="flex px-0 mx-0 flex-col w-full">
 			  {buttonNames.map((button, index) => (

@@ -33,11 +33,11 @@ export default function Heading() {
   ];
 
   return (
-	<section className="bg-dark-gray_c pt-20 md:pt-40 pb-20">
+	<section className="bg-dark-gray_c pt-20 lg:pt-40 pb-20">
 	  <div className="container mx-auto">
-		<div className="md:flex">
-		  <div className="md:block md:mr-36 mt-12">
-			<h1 className="text-background text-3xl md:text-5xl font-bold mb-4 mr-5">
+		<div className="lg:flex">
+		  <div className="lg:block xl:mr-36 mt-12">
+			<h1 className="text-background text-3xl lg:text-5xl font-bold mb-4 mr-5">
 			  Het&nbsp;
 			  <AnimatePresence mode="wait">
 				<motion.span
@@ -64,7 +64,7 @@ export default function Heading() {
 				text="Offerte aanvragen &rarr;"
 			  />
 			</Link>
-			<div className="hidden md:flex md:items-center md:space-x-4">
+			<div className="hidden lg:flex md:items-center md:space-x-4">
 			  <div className="flex items-center">
 				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
 				  <svg
@@ -109,7 +109,7 @@ export default function Heading() {
 			  </div>
 			</div>
 
-			<div className="hidden md:flex items-center mt-4 md:space-x-4">
+			<div className="hidden lg:flex items-center mt-4 md:space-x-4">
 			<div className="flex items-center">
 				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
 				  <svg

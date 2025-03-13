@@ -20,7 +20,7 @@ export default function Services() {
 		Onze ervaren beveiligers zorgen voor een veilige omgeving en minimaliseren risico&apos;s met 
 		maatwerkoplossingen en moderne technieken.
 		</p>
-		<div className="md:grid md:grid-cols-4 md:gap-8 md:py-10">
+		<div className="md:grid md:grid-cols-2 2xl:grid-cols-4 md:gap-8 md:py-10">
 			<div className="py-4 h-full">
 			<ServiceCard
 			  className="mx-auto h-full"
