@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import ServiceModal from '../modals/ServiceModal';
+import React, { useState } from "react";
+import ServiceModal from "../modals/ServiceModal";
+import Link from "next/link";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -9,7 +10,7 @@ interface ServiceCardProps {
   description: string;
   extendedDescription?: string;
   linkText: string;
-  href: string;
+  href?: string;
   className?: string;
 }
 
@@ -19,44 +20,62 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description,
   extendedDescription,
   linkText,
-  className = ""
+  href,
+  className = "",
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Functie om de beschrijving te verkorten
   const shortenDescription = (text: string) => {
-    const firstSentence = text.split('\n')[0];
-    return firstSentence;
+	const firstSentence = text.split("\n")[0];
+	return firstSentence;
+  };
+
+  const handleClick = () => {
+	if (!href) {
+	  setIsModalOpen(true);
+	}
   };
 
   return (
-    <>
-      <div className={`bg-neutral-100 rounded-3xl shadow-sm h-full ${className}`}>
-        <div className="p-6 flex flex-col h-full">
-          <div className="flex items-center gap-4">
-            <div className="bg-gray-300 p-4 rounded-2xl">
-              {icon}
-            </div>
-            <h3 className="text-base font-semibold text-gray-900">{title}</h3>
-          </div>
-          <p className="text-gray-800 flex-grow mt-3">{shortenDescription(description)}</p>
-          <button 
-            onClick={() => setIsModalOpen(true)}
-            className="text-black font-medium hover:underline mt-3 text-left"
-          >
-            {linkText}
-          </button>
-        </div>
-      </div>
+	<>
+	  <div
+		className={`bg-neutral-100 rounded-3xl shadow-sm h-full ${className}`}
+	  >
+		<div className="p-6 flex flex-col h-full">
+		  <div className="flex items-center gap-4">
+			<div className="bg-gray-300 p-4 rounded-2xl">{icon}</div>
+			<h3 className="text-base font-semibold text-gray-900">{title}</h3>
+		  </div>
+		  <p className="text-gray-800 flex-grow mt-3">
+			{shortenDescription(description)}
+		  </p>
+		  {href ? (
+			<Link
+			  href={href}
+			  className="text-black font-medium hover:underline mt-3 text-left"
+			>
+			  {linkText}
+			</Link>
+		  ) : (
+			<button
+			  onClick={handleClick}
+			  className="text-black font-medium hover:underline mt-3 text-left"
+			>
+			  {linkText}
+			</button>
+		  )}
+		</div>
+	  </div>
 
-      <ServiceModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title={title}
-        description={extendedDescription || description}
-        icon={icon}
-      />
-    </>
+	  <ServiceModal
+		isOpen={isModalOpen}
+		onClose={() => setIsModalOpen(false)}
+		title={title}
+		description={extendedDescription || description}
+		icon={icon}
+	  />
+	</>
   );
 };
 

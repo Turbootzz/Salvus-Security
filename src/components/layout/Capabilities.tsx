@@ -85,7 +85,8 @@ export default function Capabilities() {
 				  <div className="pl-8 text-base">
 					<p className="mb-4">✅ Toegangscontrole</p>
 					<p className="mb-4">🥊 Conflictbeheersing</p>
-					<p className="mb-4">🦺 Veiligheidsgevoel voor gasten en personeel</p>
+					<p className="hidden md:block md:mb-4">🦺 Veiligheidsgevoel voor gasten en personeel</p>
+					<p className="block md:hidden mb-4">🦺 Veiligheidsgevoel voor gasten/personeel</p>
 					<p className="mb-4">💊 Drugs- en wapenscreening</p>
 				  </div>
 				)}

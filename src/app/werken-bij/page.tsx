@@ -28,7 +28,7 @@ export default function WerkenBij() {
 							title="ZZP Beveiliger"
 							description="Als ZZP beveiliger bij Salvus Security krijg je de vrijheid om je eigen uren in te delen. Je werkt op verschillende locaties en bent verantwoordelijk voor je eigen administratie."
 							linkText="Solliciteer als ZZP'er"
-							href="/contact"
+							href="/zzp-contact"
 						/>
 					</div>
 					<div className="py-4">
@@ -38,7 +38,7 @@ export default function WerkenBij() {
 							title="Beveiliger in loondienst"
 							description="Als beveiliger in loondienst krijg je een vast contract met alle arbeidsvoorwaarden. Je werkt op vaste locaties en krijgt professionele begeleiding."
 							linkText="Solliciteer in loondienst"
-							href="/contact"
+							href="/loondienst-contact"
 						/>
 					</div>
 				</div>

@@ -5,19 +5,19 @@ import Button from "../common/buttons/Button";
 
 interface FormState {
   name: string;
-  company?: string;
   email: string;
   subject: string;
   message: string;
+  picklist: "objectbeveiliging" | "Evenementenbeveiliging" | "horecabeveiliging" | "winkelbeveiliging" | "overige";
 }
 
-const ContactForm = () => {
+const LoondienstContactForm = () => {
   const [formData, setFormData] = useState<FormState>({
 	name: "",
-	company: "",
 	email: "",
 	subject: "",
 	message: "",
+	picklist: "objectbeveiliging",
   });
 
   const [errors, setErrors] = useState<Partial<FormState>>({});
@@ -47,10 +47,10 @@ const ContactForm = () => {
 
 	try {
 	  const formDataToSend = {
-		Type: "Regulier Contact Formulier",
+		Type: "Loondienst Sollicitatie",
 		Naam: formData.name.trim(),
-		Bedrijf: formData.company?.trim() || '',
 		Email: formData.email.trim(),
+		Beveiligingsvoorkeur: formData.picklist,
 		Onderwerp: formData.subject.trim(),
 		Bericht: formData.message.trim(),
 	  };
@@ -78,8 +78,8 @@ const ContactForm = () => {
 		setIsSubmitted(true);
 		setFormData({
 		  name: "",
-		  company: "",
 		  email: "",
+		  picklist: "objectbeveiliging",
 		  subject: "",
 		  message: "",
 		});
@@ -138,7 +138,7 @@ const ContactForm = () => {
 	  <div className="flex items-center justify-center mb-6">
 		<Shield className="h-8 w-8 text-gray_c mr-2" />
 		<h2 className="text-2xl font-bold text-gray-900">
-			Contact opnemen
+			Solliciteer als Loondienst Beveiliger
 		</h2>
 	  </div>
 
@@ -173,34 +173,6 @@ const ContactForm = () => {
 
 		<div>
 		  <label
-			htmlFor="company"
-			className="block text-sm font-medium text-gray-700 mb-1"
-		  >
-			Bedrijfsnaam
-		  </label>
-		  <div className="relative">
-			<div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-			  <User className="h-5 w-5 text-gray-400" />
-			</div>
-			<input
-			  type="text"
-			  id="company"
-			  name="company"
-			  value={formData.company}
-			  onChange={handleChange}
-			  className={`pl-10 w-full px-4 py-2 border ${
-				errors.company ? "border-red-500" : "border-gray-300"
-			  } rounded-lg focus:ring-gray-500 focus:border-gray-500`}
-			  placeholder="Uw bedrijfsnaam"
-			/>
-		  </div>
-		  {errors.company && (
-			<p className="mt-1 text-sm text-red-600">{errors.company}</p>
-		  )}
-		</div>
-
-		<div>
-		  <label
 			htmlFor="email"
 			className="block text-sm font-medium text-gray-700 mb-1"
 		  >
@@ -225,6 +197,28 @@ const ContactForm = () => {
 		  {errors.email && (
 			<p className="mt-1 text-sm text-red-600">{errors.email}</p>
 		  )}
+		</div>
+
+		<div>
+		  <label
+			htmlFor="picklist"
+			className="block text-sm font-medium text-gray-700 mb-1"
+		  >
+			Beveiligingsvoorkeur
+		  </label>
+		  <select
+			id="picklist"
+			name="picklist"
+			value={formData.picklist}
+			onChange={handleChange}
+			className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-500 focus:border-gray-500"
+		  >
+			<option value="objectbeveiliging">Objectbeveiliging</option>
+			<option value="Evenementenbeveiliging">Evenementenbeveiliging</option>
+			<option value="horecabeveiliging">Horecabeveiliging</option>
+			<option value="winkelbeveiliging">Winkelbeveiliging</option>
+			<option value="overige">Overige</option>
+		  </select>
 		</div>
 
 		<div>
@@ -329,4 +323,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default LoondienstContactForm;

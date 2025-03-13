@@ -19,15 +19,15 @@ export default function Heading() {
 
   const images = [
 	{
-	  src: "/images/security1.jpg",
+	  src: "/images/security1.jpeg",
 	  alt: "Security Guard",
 	},
 	{
-	  src: "/images/security2.jpg",
+	  src: "/images/security2.jpeg",
 	  alt: "Security Guard",
 	},
 	{
-	  src: "/images/security3.jpg",
+	  src: "/images/security3.jpeg",
 	  alt: "Security Guard",
 	},
   ];
@@ -55,8 +55,7 @@ export default function Heading() {
 			  beveiligingsbedrijf
 			</h1>
 			<p className="text-background mb-7 leading-7 text-base md:text-lg">
-			  Zoekt u ervaren beveiligers voor uw bedrijf, winkel, evenement of
-			  horecagelegenheid? Onze professionals staan voor u klaar! Wij
+			  U bent opzoek naar beveiligers. Onze professionals staan voor u klaar! Wij
 			  bieden maatwerk beveiligingsoplossingen en zorgen ervoor dat
 			  risico&apos;s worden geminimaliseerd.
 			</p>
@@ -84,11 +83,9 @@ export default function Heading() {
 				  </svg>
 				</div>
 				<span className="ml-2 text-white text-sm font-medium">
-				  Snel geholpen
+				  Gediplomeerde beveiligers
 				</span>
 			  </div>
-
-			  {/* Second checkbox with text */}
 			  <div className="flex items-center">
 				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
 				  <svg
@@ -107,10 +104,32 @@ export default function Heading() {
 				  </svg>
 				</div>
 				<span className="ml-2 text-white text-sm font-medium">
-				  Ervaren personeel
+				  +10 jaar ervaring
 				</span>
 			  </div>
 			</div>
+
+			<div className="flex items-center mt-4">
+				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
+				  <svg
+					className="w-4 h-4 text-white"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				  >
+					<path
+					  strokeLinecap="round"
+					  strokeLinejoin="round"
+					  strokeWidth="2.5"
+					  d="M5 13l4 4L19 7"
+					></path>
+				  </svg>
+				</div>
+				<span className="ml-2 text-white text-sm font-medium">
+					beveiligingsopdrachten op maat
+				</span>
+			  </div>
 		  </div>
 		  <AutomaticSlideshow images={images} intervalTime={5000} />
 		</div>

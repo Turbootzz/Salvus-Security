@@ -6,9 +6,9 @@ export default function OverOns() {
     <>
       <Header />
       <main className="flex-grow max-w-6xl mx-auto px-6 py-12 text-gray-800 pt-40 md:pt-35 pb-10">
-        <section className="text-center">
+        <section>
           <h1 className="text-4xl font-bold text-primary mb-4">Over Ons</h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-base text-gray-700">
             Bij Salvus Security Agency staan veiligheid en professionaliteit
             centraal. Wij zijn een modern en toekomstgericht beveiligingsbedrijf
             dat hoogwaardige beveiligingsdiensten levert aan bedrijven,
@@ -16,14 +16,12 @@ export default function OverOns() {
             betrouwbare, proactieve en innovatieve beveiligingsoplossingen die
             risico&apos;s minimaliseren en een veilige omgeving garanderen.
           </p>
-        </section>
-
-        <section className="mt-12 grid md:grid-cols-2 gap-12">
-          <div>
+          
+          <div className="mt-12">
             <h2 className="text-2xl font-semibold text-primary">
               Onze Beveiligers
             </h2>
-            <p className="mt-4 text-gray-700">
+            <p className="mt-4 text-base text-gray-700">
               Met een team van goed opgeleide en gecertificeerde beveiligers
               zorgen wij voor maatwerkoplossingen die aansluiten bij de
               specifieke behoeften van onze opdrachtgevers. Of het nu gaat om
@@ -33,9 +31,9 @@ export default function OverOns() {
               technologieën en methoden werken.
             </p>
           </div>
-          <div>
+          <div className="mt-12">
             <h2 className="text-2xl font-semibold text-primary">Onze Missie</h2>
-            <p className="mt-4 text-gray-700">
+            <p className="mt-4 text-base text-gray-700">
               Wij geloven in een toekomstgerichte aanpak waarin preventie,
               technologie en menselijk inzicht samenkomen. Daarom blijven we
               voortdurend innoveren en investeren in de beste

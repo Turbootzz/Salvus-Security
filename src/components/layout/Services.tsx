@@ -20,7 +20,7 @@ export default function Services() {
 		Onze ervaren beveiligers zorgen voor een veilige omgeving en minimaliseren risico&apos;s met 
 		maatwerkoplossingen en moderne technieken.
 		</p>
-		<div className="md:grid md:grid-cols-3 md:gap-4 md:py-10">
+		<div className="md:grid md:grid-cols-4 md:gap-4 md:py-10">
 		  <div className="py-4 h-full">
 			<ServiceCard
 			  className="mx-auto h-full"
@@ -31,7 +31,6 @@ export default function Services() {
 				Van kantoren tot bouwplaatsen: wij bieden maatwerk beveiliging met professionele, getrainde beveiligers. 
 				Voorkom risico’s en bescherm uw onderneming met onze betrouwbare beveiligingsdiensten."
 			  linkText="Lees meer"
-			  href="/services/particuliere-verhuizing"
 			/>
 		  </div>
 		  <div className="py-4 h-full">
@@ -45,7 +44,6 @@ export default function Services() {
 				Onze ervaren evenementenbeveiligers zorgen voor een veilige en gecontroleerde omgeving, 
 				zodat uw event soepel verloopt."
 			  linkText="Lees meer"
-			  href="/services/particuliere-verhuizing"
 			/>
 		  </div>
 		  <div className="py-4 h-full">
@@ -58,10 +56,9 @@ export default function Services() {
 			  	Onze ervaren en gastvrije horeca-portiers zorgen voor een prettige en veilige sfeer in uw zaak. 
 				Professioneel, klantvriendelijk en doortastend wanneer het nodig is."
 			  linkText="Lees meer"
-			  href="/services/particuliere-verhuizing"
 			/>
 		  </div>
-		  <div className="py-4 md:col-start-2 h-full">
+		  <div className="py-4  h-full">
 			<ServiceCard
 			  className="mx-auto h-full"
 			  icon={<ShoppingCart size={32} className="text-gray-900" />}
@@ -71,10 +68,10 @@ export default function Services() {
 			  	Onze beveiligers zijn getraind in het herkennen van verdacht gedrag en grijpen in voordat schade ontstaat. 
 				Minder verliezen, meer veiligheid!"
 			  linkText="Lees meer"
-			  href="/services/particuliere-verhuizing"
 			/>
 		  </div>
 		</div>
+		<p className="text-gray-900 text-sm text-center md:text-base pb-8">Kies voor Salvus Security Agency – uw partner in veiligheid.</p>
 	  </div>
 	</section>
   );
