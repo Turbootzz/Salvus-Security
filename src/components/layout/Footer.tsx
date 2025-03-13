@@ -20,10 +20,10 @@ export default function Footer() {
 		  <div>
 			<h3 className="text-lg text-gray-100 font-semibold">Navigatie</h3>
 			<ul className="mt-2 space-y-2">
-			  <li><a href="#" className="text-gray-200 hover:text-white">Home</a></li>
-			  <li><a href="#" className="text-gray-200 hover:text-white">Diensten</a></li>
-			  <li><a href="#" className="text-gray-200 hover:text-white">Over ons</a></li>
-			  <li><a href="#" className="text-gray-200 hover:text-white">Contact</a></li>
+			  <li><a href="/" className="text-gray-200 hover:text-white">Home</a></li>
+			  <li><a href="/#diensten" className="text-gray-200 hover:text-white">Diensten</a></li>
+			  <li><a href="/over-ons" className="text-gray-200 hover:text-white">Over ons</a></li>
+			  <li><a href="/contact" className="text-gray-200 hover:text-white">Contact</a></li>
 			</ul>
 		  </div>
 

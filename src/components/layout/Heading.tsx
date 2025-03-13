@@ -109,7 +109,8 @@ export default function Heading() {
 			  </div>
 			</div>
 
-			<div className="hidden md:flex items-center mt-4">
+			<div className="hidden md:flex items-center mt-4 md:space-x-4">
+			<div className="flex items-center">
 				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
 				  <svg
 					className="w-4 h-4 text-white"
@@ -127,9 +128,33 @@ export default function Heading() {
 				  </svg>
 				</div>
 				<span className="ml-2 text-white text-sm font-medium">
-					beveiligingsopdrachten op maat
+				Risicoanalyse en Preventie
 				</span>
 			  </div>
+
+			  <div className="flex items-center">
+				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
+				  <svg
+					className="w-4 h-4 text-white"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				  >
+					<path
+					  strokeLinecap="round"
+					  strokeLinejoin="round"
+					  strokeWidth="2.5"
+					  d="M5 13l4 4L19 7"
+					></path>
+				  </svg>
+				</div>
+				<span className="ml-2 text-white text-sm font-medium">
+					24/7 inzetbaar
+				</span>
+			  </div>
+		</div>
+			  
 		  </div>
 		  <AutomaticSlideshow images={images} intervalTime={5000} />
 		</div>

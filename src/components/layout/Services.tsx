@@ -16,25 +16,23 @@ export default function Services() {
 		  <span className="text-gray-600"> bieden</span> wij aan?
 		</h2>
 		<p className="text-gray-900 text-base md:text-lg max-w-180">
-		Wij bieden diverse beveiligingsdiensten aan zoals object-, evenementen-, winkelbeveiliging en mobiele surveillance. 
+		Wij bieden diverse beveiligingsdiensten aan zoals object-, evenementen-, winkelbeveiliging en horeca portiers. 
 		Onze ervaren beveiligers zorgen voor een veilige omgeving en minimaliseren risico&apos;s met 
 		maatwerkoplossingen en moderne technieken.
 		</p>
-		<div className="md:grid md:grid-cols-4 md:gap-4 md:py-10">
-		  <div className="py-4 h-full">
+		<div className="md:grid md:grid-cols-4 md:gap-8 md:py-10">
+			<div className="py-4 h-full">
 			<ServiceCard
 			  className="mx-auto h-full"
 			  icon={<Building2 size={32} className="text-gray-900" />}
 			  title="Objecten"
 			  description="Uw bedrijf, onze beveiligers – samen sterk in veiligheid."
-			  extendedDescription="
-				Van kantoren tot bouwplaatsen: wij bieden maatwerk beveiliging met professionele, getrainde beveiligers. 
-				Voorkom risico’s en bescherm uw onderneming met onze betrouwbare beveiligingsdiensten."
 			  linkText="Lees meer"
+			  href="/objecten"
 			/>
 		  </div>
-		  <div className="py-4 h-full">
-			<ServiceCard
+			<div className="py-4 h-full">
+			{/* <ServiceCard
 			  className="mx-auto h-full"
 			  icon={<CalendarCheck size={32} className="text-gray-900" />}
 			  title="Evenementen"
@@ -44,7 +42,16 @@ export default function Services() {
 				Onze ervaren evenementenbeveiligers zorgen voor een veilige en gecontroleerde omgeving, 
 				zodat uw event soepel verloopt."
 			  linkText="Lees meer"
+			/> */}
+			<ServiceCard
+			  className="mx-auto h-full"
+			  icon={<CalendarCheck size={32} className="text-gray-900" />}
+			  title="Evenementen"
+			  description="Een geslaagd evenement begint met veiligheid."
+			  linkText="Lees meer"
+			  href="/evenementen"
 			/>
+
 		  </div>
 		  <div className="py-4 h-full">
 			<ServiceCard
@@ -52,22 +59,18 @@ export default function Services() {
 			  icon={<Store size={32} className="text-gray-900" />}
 			  title="Horeca portiers"
 			  description="Een veilig uitgaansleven begint bij de deur."
-			  extendedDescription="
-			  	Onze ervaren en gastvrije horeca-portiers zorgen voor een prettige en veilige sfeer in uw zaak. 
-				Professioneel, klantvriendelijk en doortastend wanneer het nodig is."
 			  linkText="Lees meer"
+			  href="/horeca-portiers"
 			/>
 		  </div>
-		  <div className="py-4  h-full">
+		  <div className="py-4 h-full">
 			<ServiceCard
 			  className="mx-auto h-full"
 			  icon={<ShoppingCart size={32} className="text-gray-900" />}
 			  title="Winkelbeveiliging"
 			  description="Diefstal voorkomen in plaats van genezen."
-			  extendedDescription="
-			  	Onze beveiligers zijn getraind in het herkennen van verdacht gedrag en grijpen in voordat schade ontstaat. 
-				Minder verliezen, meer veiligheid!"
 			  linkText="Lees meer"
+			  href="/winkelbeveiliging"
 			/>
 		  </div>
 		</div>

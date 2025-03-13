@@ -57,7 +57,7 @@ export default function Capabilities() {
 			</div>
 
 			{/* Display Text with Fade Animation */}
-			<div className="mt-6 text-lg font-semibold">
+			<div className="mt-6 text-lg font-bold">
 			  <motion.div
 				key={selected}
 				initial={{ opacity: 0 }}
@@ -66,7 +66,7 @@ export default function Capabilities() {
 				transition={{ duration: 0.2 }}
 			  >
 				{selected === "Objectbeveiliging" && (
-				  <div className="pl-8 text-base">
+				  <div className="pl-8 text-sm font-medium">
 					<p className="mb-4">🥷 Diefstal- en inbraakpreventie</p>
 					<p className="mb-4">⏱️ Snelle respons bij incidenten</p>
 					<p className="mb-4">🦺 Verhoogd het veiligheidsgevoel</p>
@@ -74,7 +74,7 @@ export default function Capabilities() {
 				  </div>
 				)}
 				{selected === "Evenementenbeveiliging" && (
-				  <div className="pl-8 text-base">
+				  <div className="pl-8 text-sm font-medium">
 					<p className="mb-4">🧑‍🤝‍🧑 Crowd control en ordehandhaving</p>
 					<p className="mb-4">🥷 Preventie van criminaliteit</p>
 					<p className="mb-4">⏱️ Snelle reactie bij noodsituaties</p>
@@ -82,16 +82,15 @@ export default function Capabilities() {
 				  </div>
 				)}
 				{selected === "Horecaportiers" && (
-				  <div className="pl-8 text-base">
+				  <div className="pl-8 text-sm font-medium">
 					<p className="mb-4">✅ Toegangscontrole</p>
 					<p className="mb-4">🥊 Conflictbeheersing</p>
-					<p className="hidden md:block md:mb-4">🦺 Veiligheidsgevoel voor gasten en personeel</p>
-					<p className="block md:hidden mb-4">🦺 Veiligheidsgevoel voor gasten/personeel</p>
+					<p className="mb-4">🦺 Veiligheidsgevoel</p>
 					<p className="mb-4">💊 Drugs- en wapenscreening</p>
 				  </div>
 				)}
 				{selected === "Winkelbeveiliging" && (
-				  <div className="pl-8 text-base">
+				  <div className="pl-8 text-sm font-medium">
 					<p className="mb-4">🥷 Diefstalpreventie</p>
 					<p className="mb-4">⏱️ Snelle interventie bij incidenten</p>
 					<p className="mb-4">🦺 Verhoogd het veiligheidsgevoel</p>
