@@ -109,7 +109,7 @@ export default function Heading() {
 			  </div>
 			</div>
 
-			<div className="flex items-center mt-4">
+			<div className="hidden md:flex items-center mt-4">
 				<div className="bg-neutral-800 rounded-full w-6 h-6 flex items-center justify-center">
 				  <svg
 					className="w-4 h-4 text-white"
