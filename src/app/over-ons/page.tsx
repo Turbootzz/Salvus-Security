@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 
 export default function OverOns() {
   const [emblaRef, embla] = useEmblaCarousel({
@@ -85,47 +86,48 @@ export default function OverOns() {
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
                 <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
-                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
-                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
-                    <h3 className="text-lg font-medium">John Doe</h3>
-                    <p className="text-gray-700">CEO & Security Expert</p>
+                  <div className="bg-neutral-200 p-6 rounded-xl text-center shadow-lg h-full">
+                    <div className="w-24 h-24 relative mx-auto mb-4">
+                      <Image
+                        src="/images/fulcotheater.png"
+                        alt="Fulco Theater"
+                        fill
+                        className="rounded-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-lg font-medium">Fulcotheater</h3>
+                    <p className="text-gray-700">Theater</p>
                   </div>
                 </div>
                 <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
-                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
-                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
-                    <h3 className="text-lg font-medium">Jane Smith</h3>
-                    <p className="text-gray-700">CTO & Cybersecurity Specialist</p>
+                  <div className="bg-neutral-200 p-6 rounded-xl text-center shadow-lg h-full">
+                    <div className="w-24 h-24 relative mx-auto mb-4">
+                      <Image
+                        src="/images/ginny2.png"
+                        alt="Ginny Utrecht"
+                        fill
+                        className="rounded-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-lg font-medium">Ginny Utrecht</h3>
+                    <p className="text-gray-700">Horeca</p>
                   </div>
                 </div>
                 <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
-                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
-                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
-                    <h3 className="text-lg font-medium">Michael Lee</h3>
-                    <p className="text-gray-700">Lead Penetration Tester</p>
+                  <div className="bg-neutral-200 p-6 rounded-xl text-center shadow-lg h-full">
+                    <div className="w-24 h-24 relative mx-auto mb-4">
+                      <Image
+                        src="/images/cafePiketanissie.png"
+                        alt="Cafe Piketanissie"
+                        fill
+                        className="rounded-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-lg font-medium">Cafe Piketanissie</h3>
+                    <p className="text-gray-700">Horeca</p>
                   </div>
                 </div>
-                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
-                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
-                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
-                    <h3 className="text-lg font-medium">Sarah Johnson</h3>
-                    <p className="text-gray-700">Head of Operations</p>
-                  </div>
-                </div>
-                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
-                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
-                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
-                    <h3 className="text-lg font-medium">David Wilson</h3>
-                    <p className="text-gray-700">Security Consultant</p>
-                  </div>
-                </div>
-                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
-                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
-                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
-                    <h3 className="text-lg font-medium">Emma Brown</h3>
-                    <p className="text-gray-700">Risk Assessment Manager</p>
-                  </div>
-                </div>
+                
               </div>
             </div>
             <button
