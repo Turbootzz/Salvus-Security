@@ -1,9 +1,20 @@
 # Salvus Security
-Websote for Salvus Security
+Website for Salvus Security
 
 ## Getting Started
 
-First, run the development server:
+First, install packages:
+```bash
+npm i
+```
+
+Change the name .env.example to .env and add your values.
+```env
+NEXT_PUBLIC_FORMSUBMIT_ID=
+NEXT_PUBLIC_PHONE=
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
