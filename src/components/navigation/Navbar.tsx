@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 //import Phone from "@/components/common/icons/Phone";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-
+import Image from "next/image";
 export default function Navbar() {
 	const pathname = usePathname();
 	const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ export default function Navbar() {
 		<div className="flex justify-between h-20 items-center">
 		  {/* Logo */}
 		  <div className="flex-shrink-0">
-			<img
+			<Image
 			  src="/images/logo.png"
 			  width={156}
 			  height={156}

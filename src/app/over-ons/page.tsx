@@ -1,7 +1,42 @@
+'use client'
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import useEmblaCarousel from 'embla-carousel-react'
+import { useCallback, useEffect, useState } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function OverOns() {
+  const [emblaRef, embla] = useEmblaCarousel({
+    align: 'start',
+    containScroll: 'trimSnaps',
+    dragFree: true,
+  })
+  const [canScrollPrev, setCanScrollPrev] = useState(false)
+  const [canScrollNext, setCanScrollNext] = useState(false)
+
+  const scrollPrev = useCallback(() => embla?.scrollPrev(), [embla])
+  const scrollNext = useCallback(() => embla?.scrollNext(), [embla])
+
+  const onSelect = useCallback(() => {
+    if (embla) {
+      setCanScrollPrev(embla.canScrollPrev())
+      setCanScrollNext(embla.canScrollNext())
+    }
+  }, [embla])
+
+  useEffect(() => {
+    if (embla) {
+      onSelect()
+      embla.on('select', onSelect)
+      embla.on('reInit', onSelect)
+
+      return () => {
+        embla.off('select', onSelect)
+        embla.off('reInit', onSelect)
+      }
+    }
+  }, [embla, onSelect])
+
   return (
     <>
       <Header />
@@ -44,26 +79,71 @@ export default function OverOns() {
 
         <section className="mt-12">
           <h2 className="text-2xl font-semibold text-primary text-center">
-            Ons Team
+            Referenties
           </h2>
-          <div className="mt-6 grid md:grid-cols-3 gap-6">
-            <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg">
-              <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-lg font-medium">John Doe</h3>
-              <p className="text-gray-700">CEO & Security Expert</p>
+          <div className="mt-6 relative px-12">
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
+                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
+                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
+                    <h3 className="text-lg font-medium">John Doe</h3>
+                    <p className="text-gray-700">CEO & Security Expert</p>
+                  </div>
+                </div>
+                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
+                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
+                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
+                    <h3 className="text-lg font-medium">Jane Smith</h3>
+                    <p className="text-gray-700">CTO & Cybersecurity Specialist</p>
+                  </div>
+                </div>
+                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
+                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
+                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
+                    <h3 className="text-lg font-medium">Michael Lee</h3>
+                    <p className="text-gray-700">Lead Penetration Tester</p>
+                  </div>
+                </div>
+                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
+                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
+                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
+                    <h3 className="text-lg font-medium">Sarah Johnson</h3>
+                    <p className="text-gray-700">Head of Operations</p>
+                  </div>
+                </div>
+                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
+                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
+                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
+                    <h3 className="text-lg font-medium">David Wilson</h3>
+                    <p className="text-gray-700">Security Consultant</p>
+                  </div>
+                </div>
+                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
+                  <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg h-full">
+                    <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
+                    <h3 className="text-lg font-medium">Emma Brown</h3>
+                    <p className="text-gray-700">Risk Assessment Manager</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg">
-              <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-lg font-medium">Jane Smith</h3>
-              <p className="text-gray-700">CTO & Cybersecurity Specialist</p>
-            </div>
-            <div className="bg-light-gray_c p-6 rounded-xl text-center shadow-lg">
-              <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-lg font-medium">Michael Lee</h3>
-              <p className="text-gray-700">Lead Penetration Tester</p>
-            </div>
+            <button
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={scrollPrev}
+              disabled={!canScrollPrev}
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={scrollNext}
+              disabled={!canScrollNext}
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
           </div>
-		  <p className="text-center text-gray-700 pt-8">Kies voor Salvus Security Agency – uw partner in veiligheid.</p>
+          <p className="text-center text-gray-700 pt-8">Kies voor Salvus Security Agency – uw partner in veiligheid.</p>
         </section>
       </main>
       <Footer />
