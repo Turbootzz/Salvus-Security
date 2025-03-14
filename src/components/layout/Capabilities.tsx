@@ -3,7 +3,7 @@ import Button from "../common/buttons/Button";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Building2, CalendarCheck, Store, ShoppingCart } from "lucide-react";
-
+import Link from "next/link";
 export default function Capabilities() {
   const [selected, setSelected] = useState<string>("Objectbeveiliging");
   const buttonNames = [
@@ -30,10 +30,11 @@ export default function Capabilities() {
 			  bedrijfsbeveiliging of evenementenbeveiliging, onze ervaren
 			  beveiligers zorgen voor uw veiligheid.
 			</p>
+			<Link href="/#diensten">
 			<Button
 			  text="Bekijk onze diensten &rarr;"
-			  onClick={() => alert("Klik!")}
 			/>
+			</Link>
 		  </div>
 
 		  <div className="bg-gray-100 flex flex-col gap-0 rounded-lg w-full md:max-w-100">

@@ -24,6 +24,7 @@ export default function Footer() {
 			  <li><Link href="/" className="text-gray-200 hover:text-white">Home</Link></li>
 			  <li><Link href="/#diensten" className="text-gray-200 hover:text-white">Diensten</Link></li>
 			  <li><Link href="/over-ons" className="text-gray-200 hover:text-white">Over ons</Link></li>
+			  <li><Link href="/werken-bij" className="text-gray-200 hover:text-white">Werken bij</Link></li>
 			  <li><Link href="/contact" className="text-gray-200 hover:text-white">Contact</Link></li>
 			</ul>
 		  </div>
@@ -33,7 +34,7 @@ export default function Footer() {
 			<h3 className="text-lg font-semibold text-gray-100">Contact</h3>
 			<ul className="mt-2 space-y-2">
 			  <li className="flex items-center gap-2 text-gray-200">
-				<Phone size={18} /> +31 6 12345678
+				<Phone size={18} /> {process.env.NEXT_PUBLIC_PHONE}
 			  </li>
 			  <li className="flex items-center gap-2 text-gray-200">
 				<Mail size={18} /> info@salvussecurity.nl
