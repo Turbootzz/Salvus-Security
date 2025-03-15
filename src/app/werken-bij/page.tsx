@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ServiceCard from "@/components/common/cards/ServiceCard";
 import { Briefcase, UserRound } from "lucide-react";
+import Image from "next/image";
 
 export default function WerkenBij() {
   return (
@@ -13,6 +14,8 @@ export default function WerkenBij() {
 				<h4 className="text-gray-900 border text-sm border-gray-800 rounded-4xl px-3 py-1 inline-block mb-4">
 					Werken bij Salvus Security Agency
 				</h4>
+				<div className="lg:grid lg:grid-cols-2 lg:gap-32">
+					<div>
 				<h2 className="text-2xl text-background md:text-4xl font-bold mb-3 md:max-w-80">
 					Word onderdeel van ons <span className="text-neutral-800">beveiligingsteam</span>
 				</h2>
@@ -20,6 +23,9 @@ export default function WerkenBij() {
 					Wij zijn altijd op zoek naar enthousiaste en betrouwbare beveiligers. 
 					Of je nu als ZZP&apos;er wilt werken of in loondienst, bij ons kun je rekenen op een professionele werkomgeving.
 				</p>
+				</div>
+				<Image className="hidden lg:block rounded-full" src="/images/security1.jpeg" alt="Werken bij Salvus Security Agency" width={300} height={300} />
+				</div>
 				<div className="md:grid md:grid-cols-2 md:gap-4 md:py-10">
 					<div className="py-4">
 						<ServiceCard
