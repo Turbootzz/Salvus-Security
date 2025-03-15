@@ -9,7 +9,7 @@ export default function HorecaPortiers() {
 	<>
 	  <Header />
 	  <main className="flex-grow pt-40 md:pt-35 pb-8 md:pb-15">
-		<div className="mx-auto px-4 md:px-1 xl:px-32 2xl:px-64">
+		<div className="mx-auto px-4 md:px-6 lg:px-16 xl:px-32 2xl:px-64">
 		  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8 lg:gap-y-20">
 			<div>
 			  <h1 className="text-4xl font-bold pb-4">Horeca Portiers</h1>
