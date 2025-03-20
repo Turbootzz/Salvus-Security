@@ -40,40 +40,34 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: FormEvent) => {
 	e.preventDefault();
-
+  
 	if (!validate()) return;
-
+  
 	setIsSubmitting(true);
-
+  
 	try {
 	  const formDataToSend = {
-		Type: "Regulier Contact Formulier",
-		Naam: formData.name.trim(),
-		Bedrijf: formData.company?.trim() || '',
-		Email: formData.email.trim(),
-		Onderwerp: formData.subject.trim(),
-		Bericht: formData.message.trim(),
+		name: formData.name.trim(),
+		company: formData.company?.trim() || "",
+		email: formData.email.trim(),
+		subject: formData.subject.trim(),
+		message: formData.message.trim(),
 	  };
-
-	  const response = await fetch(
-		"https://formsubmit.co/ajax/" + process.env.NEXT_PUBLIC_FORMSUBMIT_ID,
-		{
-		  method: "POST",
-		  headers: {
-			"Content-Type": "application/json",
-			Accept: "application/json",
-			"X-Requested-With": "XMLHttpRequest"
-		  },
-		  body: JSON.stringify(formDataToSend),
-		}
-	  );
-
+  
+	  const response = await fetch("/api/contact", {
+		method: "POST",
+		headers: {
+		  "Content-Type": "application/json",
+		},
+		body: JSON.stringify(formDataToSend),
+	  });
+  
 	  if (!response.ok) {
 		throw new Error(`HTTP error! status: ${response.status}`);
 	  }
-
+  
 	  const result = await response.json();
-	  
+  
 	  if (result.success) {
 		setIsSubmitted(true);
 		setFormData({
