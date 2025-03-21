@@ -6,18 +6,18 @@ import Button from "../common/buttons/Button";
 interface FormState {
   name: string;
   email: string;
+  picklist: "objectbeveiliging" | "Evenementenbeveiliging" | "horecabeveiliging" | "winkelbeveiliging" | "overige";
   subject: string;
   message: string;
-  picklist: "objectbeveiliging" | "Evenementenbeveiliging" | "horecabeveiliging" | "winkelbeveiliging" | "overige";
 }
 
 const LoondienstContactForm = () => {
   const [formData, setFormData] = useState<FormState>({
 	name: "",
 	email: "",
+	picklist: "objectbeveiliging",
 	subject: "",
 	message: "",
-	picklist: "objectbeveiliging",
   });
 
   const [errors, setErrors] = useState<Partial<FormState>>({});
@@ -40,40 +40,34 @@ const LoondienstContactForm = () => {
 
   const handleSubmit = async (e: FormEvent) => {
 	e.preventDefault();
-
+  
 	if (!validate()) return;
-
+  
 	setIsSubmitting(true);
-
+  
 	try {
 	  const formDataToSend = {
-		Type: "Loondienst Sollicitatie",
-		Naam: formData.name.trim(),
-		Email: formData.email.trim(),
-		Beveiligingsvoorkeur: formData.picklist,
-		Onderwerp: formData.subject.trim(),
-		Bericht: formData.message.trim(),
+		name: formData.name.trim(),
+		email: formData.email.trim(),
+		picklist: formData.picklist,
+		subject: formData.subject.trim(),
+		message: formData.message.trim(),
 	  };
-
-	  const response = await fetch(
-		"https://formsubmit.co/ajax/" + process.env.NEXT_PUBLIC_FORMSUBMIT_ID,
-		{
-		  method: "POST",
-		  headers: {
-			"Content-Type": "application/json",
-			Accept: "application/json",
-			"X-Requested-With": "XMLHttpRequest"
-		  },
-		  body: JSON.stringify(formDataToSend),
-		}
-	  );
-
+  
+	  const response = await fetch("/api/loondienst-contact", {
+		method: "POST",
+		headers: {
+		  "Content-Type": "application/json",
+		},
+		body: JSON.stringify(formDataToSend),
+	  });
+  
 	  if (!response.ok) {
 		throw new Error(`HTTP error! status: ${response.status}`);
 	  }
-
+  
 	  const result = await response.json();
-	  
+  
 	  if (result.success) {
 		setIsSubmitted(true);
 		setFormData({

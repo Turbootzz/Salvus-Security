@@ -10,8 +10,13 @@ npm i
 
 Change the name .env.example to .env and add your values.
 ```env
-NEXT_PUBLIC_FORMSUBMIT_ID=
 NEXT_PUBLIC_PHONE=
+
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
+EMAIL_RECEIVER=
 ```
 
 Then, run the development server:

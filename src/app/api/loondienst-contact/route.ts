@@ -1,17 +1,17 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-type ContactFormData = {
+type LoondienstContactFormData = {
   name: string;
-  company?: string;
   email: string;
+  picklist: string;
   subject: string;
   message: string;
 };
 
 export async function POST(req: Request) {
   try {
-    const formData: ContactFormData = await req.json();
+    const formData: LoondienstContactFormData = await req.json();
 
     // Nodemailer transporter
     const transporter = nodemailer.createTransport({
@@ -24,16 +24,16 @@ export async function POST(req: Request) {
       },
     });
 
-    const mailOptions = {
+    const mailOptionsLoondienst = {
       from: `"${formData.name}" <${process.env.SMTP_USER}>`,
       to: process.env.EMAIL_RECEIVER, // Recieves the email
       replyTo: formData.email,
       subject: formData.subject,
-      text: `Salvus Security Contact Formulier\nNaam: ${formData.name}\nBedrijf: ${formData.company || "-"}\nE-mail: ${formData.email}\n\nBericht:\n${formData.message}`,
+      text: `Solicitatie Loondienst Contact Formulier\nNaam: ${formData.name}\nBeveiligingsvoorkeur: ${formData.picklist}\nE-mail: ${formData.email}\n\nBericht:\n${formData.message}`,
       html: `
-        <h1><strong>Salvus Security Contact Formulier</strong></h1>
+        <h1><strong>Solicitatie Loondienst Contact Formulier</strong></h1>
         <p><strong>Naam:</strong> ${formData.name}</p>
-        <p><strong>Bedrijf:</strong> ${formData.company || "-"}</p>
+        <p><strong>Beveiligingsvoorkeur:</strong> ${formData.picklist}</p>
         <p><strong>E-mail:</strong> ${formData.email}</p>
         <p><strong>Bericht:</strong></p>
         <p>${formData.message.replace(/\n/g, "<br>")}</p>
@@ -41,7 +41,7 @@ export async function POST(req: Request) {
     };
 
     // Verstuur e-mail
-    await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptionsLoondienst);
 
     return NextResponse.json({ success: true, message: "E-mail succesvol verzonden!" }, { status: 200 });
   } catch (error) {
