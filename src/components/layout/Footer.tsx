@@ -3,6 +3,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SiFacebook, SiInstagram, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -15,6 +16,13 @@ export default function Footer() {
 			<p className="mt-2 text-gray-200">
 			  Uw partner in professionele beveiligingsoplossingen.
 			</p>
+			<Image
+			  src="/images/latest/justis2.png"
+			  alt="Justis ND logo"
+			  width={150}
+			  height={50}
+			  className="mt-4"
+			/>
 		  </div>
 
 		  {/* Navigatie */}
