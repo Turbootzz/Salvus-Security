@@ -19,8 +19,8 @@ export default function Footer() {
 			<Image
 			  src="/images/latest/justis2.png"
 			  alt="Justis ND logo"
-			  width={150}
-			  height={50}
+			  width={100}
+			  height={100}
 			  className="mt-4"
 			/>
 		  </div>
