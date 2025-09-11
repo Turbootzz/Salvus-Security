@@ -19,11 +19,15 @@ export default function Heading() {
 
   const images = [
 	{
-	  src: "/images/gio.jpeg",
+	  src: "/images/security1.jpeg",
 	  alt: "Security Guard",
 	},
 	{
-	  src: "/images/securityguard.jpeg",
+	  src: "/images/security2.jpeg",
+	  alt: "Security Guard",
+	},
+	{
+	  src: "/images/security3.jpeg",
 	  alt: "Security Guard",
 	},
   ];

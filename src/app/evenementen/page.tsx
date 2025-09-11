@@ -14,7 +14,7 @@ export default function Evenementen() {
 			  <h1 className="text-4xl font-bold pb-4">
 				Evenementenbeveiligers
 			  </h1>
-			  <p className="text-base pb-6">
+			  <p className="text-lg pb-6">
 				De veiligheid van uw evenement is van groot belang. Of het nu gaat
 				om een concert, festival, congres of sportevenement, Salvus Security
 				Agency levert gespecialiseerde evenementenbeveiligers die zorgen
@@ -32,7 +32,7 @@ export default function Evenementen() {
 			<div>
 			  <Image 
 				className="rounded-2xl shadow-xl dark:shadow-gray-600 xl:ml-24" 
-				src="/images/evenement-security.jpeg" 
+				src="/images/gio.jpeg" 
 				alt="Evenementenbeveiligers" 
 				width={400} 
 				height={400} 
@@ -41,15 +41,15 @@ export default function Evenementen() {
 			<div>
 			  <Image 
 				className="hidden md:block rounded-2xl shadow-xl dark:shadow-gray-600 md:mr-24" 
-				src="/images/security3.jpeg" 
+				src="/images/evenement-security.jpeg" 
 				alt="Evenementenbeveiligers" 
-				width={400} 
+				width={500} 
 				height={400} 
 			  />
 			</div>
 			<div>
 			  <h2 className="text-2xl font-bold pb-4">Waarom Salvus security Agency?</h2>
-			  <ul className="list-disc pl-4">
+			  <ul className="text-lg list-disc pl-4">
 				<li>Toegangscontrole</li>
 				<li>Crowd management</li>
 				<li>Gedragsanalyse</li>
