@@ -31,7 +31,7 @@ export default function HorecaPortiers() {
 			<div>
 			  <Image
 				className="rounded-2xl shadow-xl dark:shadow-gray-600 xl:ml-24"
-				src="/images/evenement-security.jpeg"
+				src="/images/latest/salvussecurity2.jpeg"
 				alt="Horeca Portiers"
 				width={400}
 				height={400}
@@ -40,7 +40,7 @@ export default function HorecaPortiers() {
 			<div>
 			  <Image
 				className="hidden md:block rounded-2xl shadow-xl dark:shadow-gray-600 md:mr-24"
-				src="/images/security3.jpeg"
+				src="/images/latest/salvussecurity1.jpeg"
 				alt="Horeca Portiers"
 				width={400}
 				height={400}
