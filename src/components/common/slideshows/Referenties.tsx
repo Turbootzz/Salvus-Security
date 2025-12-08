@@ -150,6 +150,24 @@ export default function Referenties() {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-2 sm:p-3">
+                                    <div className="bg-neutral-200 p-4 sm:p-6 rounded-xl text-center shadow-lg h-full">
+                                        <div className="flex flex-col items-center">
+                                            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 relative mx-auto mb-3 sm:mb-4">
+                                                <Image
+                                                    src="/images/vvmaarssen.png"
+                                                    alt="VV Maarssen"
+                                                    fill
+                                                    className="rounded-full object-cover"
+                                                />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-base sm:text-lg font-medium">VV Maarssen</h3>
+                                                <p className="text-sm sm:text-base text-gray-700">Voetbalvereniging</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <button
