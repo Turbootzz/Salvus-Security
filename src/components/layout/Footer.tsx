@@ -1,7 +1,8 @@
 "use client";
 
 import { Mail, MapPin, Phone } from "lucide-react";
-import { SiFacebook, SiInstagram, SiLinkedin } from "react-icons/si";
+import { SiFacebook, SiInstagram } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -60,7 +61,7 @@ export default function Footer() {
 		  <div className="flex gap-4 mt-4 md:mt-0">
 			<Link href="/" className="text-gray-100 hover:text-white"><SiFacebook size={20} /></Link>
 			<Link href="/" className="text-gray-100 hover:text-white"><SiInstagram size={20} /></Link>
-			<Link href="/" className="text-gray-100 hover:text-white"><SiLinkedin size={20} /></Link>
+			<Link href="/" className="text-gray-100 hover:text-white"><FaLinkedin size={20} /></Link>
 		  </div>
 		</div>
 	  </div>
